@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="assets/css/Contactus.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/angular.min.js"></script>
+	<script type="text/javascript"> 
+		$(window).scroll(function(){
+			if ($(this).scrollTop()>100){
+				$('.menu').addClass("sticky");
+			}
+			else
+			{
+				$('.menu').removeClass("sticky");
+			}
+		})
+	</script>
+</head>
+<body>
+	<div class="text">
+		<img class="elang" src="assets/img/logo-slemanball.png" height="130px" width="130px">
+		<img class="gambarball" src="assets/img/slemanball.png" height="80px">
+		<a href=Login.html><button class="button-login">Login Slemanku</button></a>
+		
+	</div>
+	<ul class="menu">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="News.html">News</a></li>
+		<li><a href="Profil.html">Profile</a></li>
+		<li><a href="Pertandingan.html">Pertandingan</a></li>
+		<li><a href="Team.html">Team</a></li>
+		<li><a href="Gallery.html">Gallery</a></li>
+		<li><a href="Contactus.html">Contact Us</a></li>
+	</ul>
+	</div>
+	
+	<div class="tulnews"><a class="atol">Contact Us</a></div>
+	<div class="contactus">
+		<div class="contactus">
+	<div class="tengah">	
+<form ng-app="myApp" ng-controller="validatectrl" name="myForm" novalidate>
+			<p class="font">Nama<br><br>
+<input class="put" type="text" name="user" ng-model="user" required><br>
+		<div class="redbox" ng-show="myForm.user.$dirty && myForm.user.$invalid"><br>
+			<span ng-show="myForm.user.$error.required">Nama wajib Di isi!</span>
+		</div>
+</p>
+
+			
+
+
+
+
+
+
+			<p class="font">Email<br><br>
+				<input class="put" type="email" name="email" ng-model="email" required><br>
+		<div class="redbox" ng-show="myForm.email.$dirty && myForm.email.$invalid"><br>
+			<span ng-show="myForm.email.$error.required">Email wajib Di isi!</span>
+			<span ng-show="myForm.email.$error.email">Format salah!</span>
+		</div></p>
+
+
+
+
+
+
+
+
+		
+			<p class="font">Phone<br><br>
+<input class="put" type="text" name="phone" ng-model="phone" required><br>
+		<div class="redbox" ng-show="myForm.phone.$dirty && myForm.phone.$invalid"><br>
+			<span ng-show="myForm.phone.$error.required">Nomor tidak boleh kosong</span>
+		</div>
+</p>
+
+			<p class="font">Message</p>
+
+
+			<textarea class="mes" type"text"></textarea><br><br>
+
+
+
+
+
+
+			
+			<p class="font">
+			<input class="register" type="submit"
+			ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.user.$email && myForm.email.$invalid" value="Submit">
+		</p>
+
+
+
+		</form>
+</div>
+<div class="alamat"><div class="altext">PT Putra Sleman Sembada. Komplek Stadion Maguwoharjo Sayap Barat. Sleman Yogyakarta<br><br>(0274) 453 3001<br><br>supereljatv@gmail.com<br>
+marketing@pss-sleman.co.id<br>
+official@pss-sleman.co.id<br>
+admin@pss-sleman.co.id<br></div><br>
+<div id="map" style="width:100%;height:200px"></div>
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(-7.75056111111111, 110.4182);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+  infowindow.open(map,marker);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzrgx3DogrUKfNWnKjivXmmvhjuTz3YVI&callback=myMap"></script>
+</div>
+	</div>
+
+		
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+	</div>	
+	<div class="footer1"><center>
+		<a href="http://www.twitter.com"><img src="assets/img/twitter.png" height="30px" width="30px"></a>
+		<a href="http://www.facebook.com"><img src="assets/img/fb.png" height="30px" width="30px"></a><br>
+		<p>Copyright © 2018 Slemanball</p></center></div>
+<script>
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+<script>
+		var app = angular.module('myApp', []);
+		app.controller('validatectrl',function($scope){
+			$scope.user = '';
+			$scope.email ='';
+			$scope.phone ='';
+
+		});
+	</script>
+</body>
+</html>

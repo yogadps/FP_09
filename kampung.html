@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Jadwal Pertandingan</title>
+	<link rel="stylesheet" href="assets/css/kampung.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript"> 
+		$(window).scroll(function(){
+			if ($(this).scrollTop()>100){
+				$('.menu').addClass("sticky");
+			}
+			else
+			{
+				$('.menu').removeClass("sticky");
+			}
+		})
+	</script>
+</head>
+<body>
+	<div class="text">
+		<img class="elang" src="assets/img/logo-slemanball.png" height="130px" width="130px">
+		<img class="gambarball" src="assets/img/slemanball.png" height="80px">
+		<a href=Login.html><button class="button-login">Login Slemanku</button></a>
+		
+	</div>
+	<ul class="menu">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="News.html">News</a></li>
+		<li><a href="Profil.html">Profile</a></li>
+		<li><a href="Pertandingan.html">Pertandingan</a></li>
+		<li><a href="Team.html">Team</a></li>
+		<li><a href="Gallery.html">Gallery</a></li>
+		<li><a href="Contactus.html">Contact Us</a></li>
+	</ul>
+	</div>
+	
+
+
+	<div class="tulnews"><a class="atol">Pertandingan</a></div>
+	<div class="contlaga">
+
+	
+<div class="btn-group" style="width:100%">
+  <a href=Pertandingan.html><button class="laga">Laga PSS</button></a>
+  <a href=kampung.html><button class="laga">Laga Kampung</button></a>
+  
+</div>
+
+
+		
+	</div>
+	<div class="contplay"> 
+<div class="contplay2">
+
+	<div class="atext">Anda harus Login jika ingin mengisi jadwal pertandingan tim anda
+
+
+
+
+		</div>
+
+<a href=Login.html><button class="register"><b>Log in</b></button></a>
+			</div>
+
+	
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	</div>	
+	<div class="footer1"><center>
+		<a href="http://www.twitter.com"><img src="assets/img/twitter.png" height="30px" width="30px"></a>
+		<a href="http://www.facebook.com"><img src="assets/img/fb.png" height="30px" width="30px"></a><br>
+		<p>Copyright © 2018 Slemanball</p></center></div>
+<script>
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>

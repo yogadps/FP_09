@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gallery</title>
+	<link rel="stylesheet" href="assets/css/gallery.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript"> 
+		$(window).scroll(function(){
+			if ($(this).scrollTop()>100){
+				$('.menu').addClass("sticky");
+			}
+			else
+			{
+				$('.menu').removeClass("sticky");
+			}
+		})
+	</script>
+</head>
+<body>
+	<div class="text">
+		<img class="elang" src="assets/img/logo-slemanball.png" height="130px" width="130px">
+		<img class="gambarball" src="assets/img/slemanball.png" height="80px">
+		<a href=Login.html><button class="button-login">Login Slemanku</button></a>
+		
+	</div>
+	<ul class="menu">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="News.html">News</a></li>
+		<li><a href="Profil.html">Profile</a></li>
+		<li><a href="Pertandingan.html">Pertandingan</a></li>
+		<li><a href="Team.html">Team</a></li>
+		<li><a href="Gallery.html">Gallery</a></li>
+		<li><a href="Contactus.html">Contact Us</a></li>
+	</ul>
+	</div>
+	
+	<div class="tulnews"><a class="atol">Gallery</a></div>
+	<div class="contactus">
+		<div class="row">
+  <div class="column">
+    <img src="assets/img/sinau-caknun.jpg" width="380px" height="250px">
+    <img src="assets/img/launching-team.png" width="380px" height="250px">
+    <img src="assets/img/suporter.png" width="380px" height="250px">
+  </div>
+
+  <div class="column">
+  <img src="assets/img/stdmaguwo.jpg" width="380px" height="250px">
+  <img src="assets/img/pss2018.jpg" width="380px" height="250px">
+  <img src="assets/img/pssvmadura.jpg" width="380px" height="250px">
+  </div>
+
+  <div class="column">
+  	<img src="assets/img/pssvtimnas1.jpg" width="380px" height="250px">
+    <img src="assets/img/pssvbiak2.jpg" width="380px" height="250px">
+    <img src="assets/img/pssvbiak1.jpg" width="380px" height="250px">
+  </div>
+   
+  <div class="column">
+    <img src="assets/img/latihanpss.jpg" width="380px" height="250px">
+    <img src="assets/img/suporter2.jpg" width="380px" height="250px">
+    <img src="assets/img/Memimpikan-kota-sepakbola.jpg" width="380px" height="250px">
+  </div>
+
+  <div class="column">
+    <img src="assets/img/suporter3.jpg" width="380px" height="250px">
+    <img src="assets/img/falcao.jpg" width="380px" height="250px">
+    <img src="assets/img/falcao1.jpg" width="380px" height="250px">
+  </div>
+
+  <div class="column">
+    <img src="assets/img/suporter5.jpg" width="380px" height="250px">
+    <img src="assets/img/suporter4.jpg" width="380px" height="250px">
+    <img src="assets/img/menyanyikan-lagu.jpg" width="380px" height="250px">
+  </div>
+  
+  <div class="column">
+    <img src="assets/img/fitness.jpg" width="380px" height="250px">
+    <img src="assets/img/suporter6.jpg" width="380px" height="250px">
+    <img src="assets/img/pss6.jpg" width="380px" height="250px">
+  </div>
+
+</div>
+		
+		
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+	</div>	
+	<div class="footer1"><center>
+		<a href="http://www.twitter.com"><img src="assets/img/twitter.png" height="30px" width="30px"></a>
+		<a href="http://www.facebook.com"><img src="assets/img/fb.png" height="30px" width="30px"></a><br>
+		<p>Copyright © 2018 Slemanball</p></center></div>
+<script>
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+<script>
+
+var elements = document.getElementsByClassName("column");
+
+
+var i;
+
+
+
+
+function two() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.flex = "50%";
+    }
+}
+
+
+}
+</script>
+</body>
+</html>
